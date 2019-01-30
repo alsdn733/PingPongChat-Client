@@ -171,7 +171,7 @@ public class LoginActivity extends AppCompatActivity implements OnConnectionFail
         if (result.isSuccess()) {
             // Signed in successfully, show authenticated UI.
             Toast.makeText(LoginActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
-            Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent loginIntent = new Intent(LoginActivity.this, FriendListActivity.class);
             LoginActivity.this.startActivity(loginIntent);
         } else {
             // Signed out, show unauthenticated UI.
@@ -186,7 +186,7 @@ public class LoginActivity extends AppCompatActivity implements OnConnectionFail
             // Signed in successfully, show authenticated UI.
             // 로그인 성공
             Toast.makeText(LoginActivity.this, "로그인 성공", Toast.LENGTH_SHORT).show();
-            Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent loginIntent = new Intent(LoginActivity.this, FriendListActivity.class);
             LoginActivity.this.startActivity(loginIntent);
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.

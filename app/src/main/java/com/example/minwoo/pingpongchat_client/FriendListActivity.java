@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.example.minwoo.pingpongchat_client.LoginActivity;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -35,17 +36,19 @@ public class FriendListActivity extends AppCompatActivity {
             String personFamilyName = acct.getFamilyName();
             String personEmail = acct.getEmail();
             String personId = acct.getId();
-            Uri personPhoto = acct.getPhotoUrl();
+            String personPhotoUrl = acct.getPhotoUrl().toString();
+
+            Log.i("GoogleLogin2", "personName=" + personName);
+            Log.i("GoogleLogin2", "personEmail=" + personEmail);
+            Log.i("GoogleLogin2", "personPhoto=" + personPhotoUrl);
+
         }
 
         ArrayList<UserInfo> UserInfoArrayList = new ArrayList<>();
-        UserInfoArrayList.add(new UserInfo(, "5,000원"));
 
+        UserInfoArrayList.add(new UserInfo(acct.getDisplayName(), acct.getEmail(), acct.getPhotoUrl().toString()));
 
-        MyAdapter myAdapter = new MyAdapter(UserInfoArrayList);
-
+        MyAdapter myAdapter = new MyAdapter(this, UserInfoArrayList);
         mRecyclerView.setAdapter(myAdapter);
-
-
     }
 }
