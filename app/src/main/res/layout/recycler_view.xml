@@ -48,11 +48,10 @@
                 android:layout_marginLeft="10dp">
                 <TextView
                     android:id="@+id/tvPersonEmail"
-                    android:layout_width="200dp"
+                    android:layout_width="match_parent"
                     android:layout_height="25dp"
+                    android:textAlignment="viewEnd"
                     android:textSize="16sp"
-                    android:gravity="right"
-                    android:textAlignment="gravity"
                     android:textStyle="normal|bold" />
             </LinearLayout>
         </LinearLayout>
