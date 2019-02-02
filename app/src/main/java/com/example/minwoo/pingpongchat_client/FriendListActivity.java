@@ -1,5 +1,6 @@
 package com.example.minwoo.pingpongchat_client;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -78,7 +79,8 @@ public class FriendListActivity extends AppCompatActivity {
                     //터치한 항목이 본인이면 프로필 액티비티로 전환
                     if(Objects.equals(acct.getEmail(), userInfo.personEmail) &&
                             Objects.equals(acct.getDisplayName(), userInfo.personName)){
-                        Toast.makeText(FriendListActivity.this, "삐빅 본인입니다.", Toast.LENGTH_SHORT).show();
+                        Intent loginIntent = new Intent(FriendListActivity.this, UserProfileActivity.class);
+                        FriendListActivity.this.startActivity(loginIntent);
                     }
                     return true;
                 }

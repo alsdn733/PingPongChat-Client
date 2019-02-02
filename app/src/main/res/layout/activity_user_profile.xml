@@ -59,20 +59,21 @@
         app:layout_constraintGuide_percent="0.59" />
 
     <TextView
+        android:id="@+id/tvPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="신민우"
         android:textSize="25sp"
+        android:textStyle="normal|bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <TextView
+        android:id="@+id/tvPersonEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="alsdn733@gmail.com"
-        android:textSize="12sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
